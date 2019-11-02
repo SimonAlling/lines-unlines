@@ -38,7 +38,7 @@
     "prepublishOnly": "npm run verify",
     "rename": "renamer --force --find \"/\\.js$/\" --replace \".mjs\" \"dist/**\"",
     "test": "jest",
-    "verify": "npm run lint && npm run build && npm test"
+    "verify": "repository-check-dirty && npm run lint && npm run build && npm test"
   },
   "sideEffects": false,
   "jest": {
@@ -58,6 +58,7 @@
     "jest": "^24.8.0",
     "jest-function": "^1.0.1",
     "renamer": "^1.1.2",
+    "repository-check-dirty": "^1.0.2",
     "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
     "typescript": "^3.5.3"
